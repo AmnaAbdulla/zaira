@@ -1,0 +1,551 @@
+
+{% load static %}
+{% load cart_tag %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Zaira</title>
+        <meta name="description" content="Premium eCommerce Template">
+
+        <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google Fonts -->
+        <link href="../../../fonts.googleapis.com/css65e2.css?family=Poppins:300,400,500,600,700%7COswald:300,400,500,600,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'web/css/plugins.min.css' %}">
+        <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{% static 'web/images/icons/favicon.png' %}">
+
+
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5175/utf-latest.min.css">
+
+
+
+
+        <!-- Modernizr -->
+        <script src="{% static 'web/js/modernizr.js' %}"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header class="header sticky-header">
+                <div class="container">
+                    <a href="{% url 'web:index' %}" class="site-logo" title="Shopo - eCommerce Template">
+                      <img src="{% static '\web\images\zairaa.png' %}" alt="Logo" style="display: flex; object-fit: cover; width:50px; height:50px; border-radius:50% 50%;">
+                        <span class="sr-only">Zaira</span>
+                    </a>
+
+                    <div class="header-dropdowns">
+                        <div class="dropdown header-dropdown">
+                            <!--a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                                USD
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" title="Euro">EUR</a></li>
+                                <li><a href="#" title="Pound">PND</a></li>
+                                <li><a href="#" title="Yen">YEN</a></li>
+                            </ul>
+                        </div><!-- End .dropddown -->
+
+                        <!--div class="dropdown header-dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                                ENG
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" title="Spanish">SPA</a></li>
+                                <li><a href="#" title="Turkish">TUR</a></li>
+                                <li><a href="#" title="German">GER</a></li>
+                            </ul>
+                        </div><!-- End .dropddown -->
+                    </div><!-- End .header-dropdowns -->
+
+                    <div class="search-form-container">
+                        <a href="#" class="search-form-toggle" title="Toggle Search"><i class="fa fa-search"></i></a>
+                        <form action="#">
+                            <div class="dropdown search-dropdown">
+                                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                                 Products
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                
+                                    <li><a href="#">PAKISTHANI SUIT</a></li>
+                                    <li><a href="#">ETHNIC WEAR</a></li>
+                                    <li><a href="#">PARTY WEAR</a></li>
+                                    <li><a href="#">PRAYER DRESS</a></li>
+                                    <li><a href="#">WESTERN DRESS</a></li>
+                                
+                                </ul>
+                            </div><!-- End .dropddown -->
+                            <input type="search" class="form-control" placeholder="Search" required>
+                            <button type="submit" title="Search" class="btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div><!-- End .search-form-container -->
+
+                    <ul class="top-links">
+                        <li><a href="signin.html">Sign In</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+
+                    <div class="dropdown cart-dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="cart-icon">
+                                <img src="{% static 'web/images/bag.png' %}" alt="Cart">
+                                <span class="cart-count">4</span>
+                            </span>
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <p class="dropdown-cart-info">You have 2 products in your cart.</p>
+                            <div class="dropdown-menu-wrapper">
+                                <div class="product">
+                                    <figure class="product-image-container">
+                                        <!--a href="product.html" title="Product Name">
+                                            <img src="{% static 'web/images/products/small/product2.jpg' %}" alt="Product Image">
+                                        </a!-->
+                                    </figure>
+
+                                    <!--div>
+                                        <a href="#" class="btn-delete" title="Delete product" role="button"></a>
+                                        <h4 class="product-title"><a href="product.html">Sunglasses</a></h4>
+                                        <div class="product-price-container">
+                                            <span class="product-price">$110.00</span>
+                                        </div><!-- End .product-price-container -->
+                                        <!--div class="product-qty">x1</div><!-- End .product-qty -->
+                                    </div><!-- End .product-image-container -->
+                                </div><!-- End .product- -->
+
+                                <div class="product">
+                                    <figure class="product-image-container">
+                                        <!--a href="product.html" title="Product Name">
+                                            <img src="{% static 'web/images/products/small/product1.jpg' %}" alt="Product Image">
+                                        </a!-->
+                                    </figure>
+
+                                    <div>
+                                        <!--a href="#" class="btn-delete" title="Delete product" role="button"></a>
+                                        <h4 class="product-title"><a href="product.html">Leather Belt</a></h4>
+                                        <div class="product-price-container">
+                                            <span class="product-price">$99.00</span>
+                                        </div><!-- End .product-price-container -->
+                                        <!--div class="product-qty">x1</div><!-- End .product-qty -->
+                                    </div><!-- End .product-image-container -->
+                                </div><!-- End .product- -->
+                            </div><!-- End .droopdowm-menu-wrapper -->
+
+                            <!--div class="cart-dropdowm-action">
+                                <div class="dropdowm-cart-total"><span>TOTAL:</span> $209.00</div>
+                                <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                            </div><!-- End .cart-dropdown-action -->
+                        </div><!-- End .dropdown-menu -->
+                    </div><!-- End .cart-dropddown -->
+
+                    <a href="#" class="sidemenu-btn" title="Menu Toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div><!-- End .container-fluid -->
+            </header><!-- End .header -->
+
+            <aside class="sidemenu">
+                <div class="sidemenu-wrapper">
+                    <div class="sidemenu-header">
+                        <a href="index.html" class="sidemenu-logo">
+                            <img src="{% static 'web/images/logo.png' %}" alt="logo">
+                        </a>
+                    </div><!-- End .sidemenu-header -->
+
+                    <ul class="metismenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="#" aria-expanded="false">Pages <span class="sidemenu-icon"></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="404.html">404 Page</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="false">Shop <span class="sidemenu-icon"></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="category.html">Category</a></li>
+                                <li><a href="product.html">Product</a></li>
+                                <li><a href="cart.html">Shopping Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="signin.html">Sign In</a></li>
+                                <li><a href="signup.html">Sign Up</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="false">Portfolio<span class="sidemenu-icon"></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="portfolio-2col.html">Portfolio 2 Col</a></li>
+                                <li><a href="portfolio-3col.html">Portfolio 3 Col</a></li>
+                                <li><a href="{% url 'party' %}">Party Wear</a></li>
+                                <li><a href="single-portfolio.html">Portfolio Post</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="false">Blog<span class="sidemenu-icon"></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="single.html">blog Post</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Buy Shopo!</a></li>
+                    </ul>
+                </div><!-- End .sidemenu-wrapper -->
+            </aside><!-- End .sidemenu -->
+
+            <div class="sidemenu-overlay"></div><!-- End .sidemenu-overlay -->
+            
+
+  <div class="main">
+    <h1>Shopping cart</h1>
+    <h2 class="sub-heading"></h2>
+    
+    <section class="shopping-cart">
+      <ol class="ui-list shopping-cart--list" id="shopping-cart--list">
+        <script id="shopping-cart--list-item-template" type="text/template">
+          {% for key, value in request.session.cart.items %}
+          <li class="_grid shopping-cart--list-item">
+            <div class="_column product-image">
+              <img class="product-image--img" src="{{ value.image }}" alt="Item image" />
+            </div>
+            <div class="_column product-info">
+              <h4 class="product-name">{{ value.name }}</h4>
+              <div class="price product-single-price">${{ value.price }}</div>
+            </div>
+            <div class="_column product-modifiers" data-product-price="{{ value.price }}">
+              <div class="_grid">
+                <button class="_btn _column product-subtract">&minus;</button>
+                <div class="_column product-qty">1</div>
+                <button class="_btn _column product-plus">&plus;</button>
+              </div>
+              <button class="_btn entypo-trash "><a href="{% url 'web:cart_clear' %}">Remove</a></button></button>
+              <div class="price product-total-price">$0.00</div>
+            </div>
+          </li>
+          {% endfor %}
+        </script>
+      </ol>
+
+      <footer class="_grid cart-totals">
+        <div class="_column subtotal" id="subtotalCtr">
+          <div class="cart-totals-key">Subtotal</div>
+          <div class="cart-totals-value">$0.00</div>
+        </div>
+    
+        <!-- Add the element to display taxes -->
+        <div class="_column taxes" id="taxesCtr">
+          <div class="cart-totals-key">Taxes (6%)</div>
+          <div class="cart-totals-value">$0.00</div>
+        </div>
+    
+        <div class="_column shipping" id="shippingCtr">
+          <div class="cart-totals-key">Shipping</div>
+          <div class="cart-totals-value">$0.40</div>
+        </div>
+
+        <div class="_column total" id="totalCtr">
+          <div class="cart-totals-key">Total</div>
+          <div class="cart-totals-value">$0.00</div>
+        </div>
+    
+       
+    
+        <div class="_column checkout">
+            <a class="_btn checkout-btn entypo-forward"
+            href="{% url 'web:checkout' %}?product_id={{ key }}">
+            Checkout
+         </a>         
+                 </div>
+      </footer>
+    </section>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="info-bar">
+                        <div class="info-bar-col">
+                            <h5 class="info-bar-title">Exchange</h5>
+                            <p></p>
+                        </div><!-- End .info-bar-col -->
+                        <div class="info-bar-col">
+                            <!--h5 class="info-bar-title">MONEY BACK GUARANTEE</h5>
+                            <p>100% money back guarantee</p>
+                        </div><!-- End .info-bar-col -->
+                        <div class="info-bar-col">
+                            <h5 class="info-bar-title">ONLINE SUPPORT 24/7</h5>
+                            <p>Highly customer satisfaction</p>
+                        </div><!-- End .info-bar-col -->
+                    </div><!-- End .info-bar -->
+                </div><!-- End .container -->
+                <div class="footer-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget widget-about">
+                                    <h4 class="widget-title">Contact Information</h4>
+                                    <address>
+                                      <span>Zaira Designs
+                                          First Floor
+                                      </span>
+                                      <span>Mankarathodi,Building Opposite
+                                          SBI(RBO),Varangode,Malappuram
+                                          676519
+                                      </span>
+                                      <span>8089302309</span>
+                                      <span>zaira_designs </span>
+                                      <a href="mailto:zairadesigns2022@gmail.com">zairadesigns2022@gmail.com</a>
+                                  </address>
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">Collection</h4>
+
+                                    <ul class="links">
+                                      <li><a href="#">PAKISTHANI SUIT</a></li>
+                                      <li><a href="#">ETHNIC WEAR</a></li>
+                                      <li><a href="#">PARTY WEAR</a></li>
+                                      <li><a href="#">PRAYER DRESS</a></li>
+                                      <li><a href="#">WESTERN DRESS</a></li>
+                                    </ul>
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="clearfix visible-sm"></div><!-- clearfix -->
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">My Account</h4>
+
+                                    <ul class="links">
+                                        <li><a href="#">Account</a></li>
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="#">My cart</a></li>
+                                        <li><a href="#">Wishlist</a></li>
+                                        <li><a href="#">Checkout</a></li>
+                                    </ul>
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget widget-newsletter">
+                                    <h4 class="widget-title">Newsletter</h4>
+                                    <p>Signup for our newsletter</p>
+
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email" required>
+                                            <input type="submit" value="GO" class="btn">
+                                        </div><!-- End .form-group -->
+                                    </form>
+
+                                    <div class="social-icons">
+                                        <a href="#" class="social-icon" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                        <a href="#" class="social-icon" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                        <a href="#" class="social-icon" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .container -->
+                </div><!-- End .footer-inner -->
+
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="copyright"></p>
+                    <img src="{% static 'web/images/cards.png' %}" alt="Payment Methods" class="img-cards">
+                    </div><!-- End .container -->
+                </div><!-- End .footer-bottom -->
+            </footer><!-- End .footer -->
+        </div><!-- End #wrapper -->
+        
+        <a id="scroll-top" href="#top" title="Scroll top"><i class="fa fa-angle-up"></i></a>
+
+
+
+
+
+{% comment %} *************************************************** {% endcomment %}
+
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
+  <script>
+    /* jslint browser: true*/
+    /*global $*/
+
+    // https://github.com/jasonmoo/t.js
+    (function(){function c(a){this.t=a}function l(a,b){for(var e=b.split(".");e.length;){if(!(e[0]in a))return!1;a=a[e.shift()]}return a}function d(a,b){return a.replace(h,function(e,a,i,f,c,h,k,m){var f=l(b,f),j="",g;if(!f)return"!"==i?d(c,b):k?d(m,b):"";if(!i)return d(h,b);if("@"==i){e=b._key;a=b._val;for(g in f)f.hasOwnProperty(g)&&(b._key=g,b._val=f[g],j+=d(c,b));b._key=e;b._val=a;return j}}).replace(k,function(a,c,d){return(a=l(b,d))||0===a?"%"==c?(new Option(a)).innerHTML.replace(/"/g,"&quot;"):
+    a:""})}var h=/\{\{(([@!]?)(.+?))\}\}(([\s\S]+?)(\{\{:\1\}\}([\s\S]+?))?)\{\{\/\1\}\}/g,k=/\{\{([=%])(.+?)\}\}/g;c.prototype.render=function(a){return d(this.t,a)};window.t=c})();
+    // end of 't';
+    
+    Number.prototype.to_$ = function () {
+      return "$" + parseFloat( this ).toFixed(2);
+    };
+    String.prototype.strip$ = function () {
+      return this.split("$")[1];
+    };
+
+    
+    
+    var app = {
+      shipping : 5.00,
+      products : [
+        {
+          "name" : "Self stirring mug",
+          "img" : "https://i.dailymail.co.uk/i/pix/2012/09/16/article-2204256-15053801000005DC-304_634x524.jpg",
+          "price" : "12.35",
+          "desc" : "Don't get tired!"
+        }
+      ],
+    
+      removeProduct: function () {
+        "use strict";
+        var item = $(this).closest(".shopping-cart--list-item");
+        item.addClass("closing");
+        window.setTimeout( function () {
+          item.remove();
+          app.updateTotals();
+        }, 500); // Timeout for css animation
+      },
+    
+      addProduct: function () {
+        "use strict";
+        var qtyCtr = $(this).prev(".product-qty"),
+          quantity = parseInt(qtyCtr.html(), 10) + 1;
+        app.updateProductSubtotal(this, quantity);
+      },
+    
+      subtractProduct: function () {
+        "use strict";
+        var qtyCtr = $(this).next(".product-qty"),
+          num = parseInt(qtyCtr.html(), 10) - 1,
+          quantity = num <= 0 ? 0 : num;
+        app.updateProductSubtotal(this, quantity);
+      },
+    
+      updateProductSubtotal: function (context, quantity) {
+        "use strict";
+        var ctr = $(context).closest(".product-modifiers"),
+          productQtyCtr = ctr.find(".product-qty"),
+          productPrice = parseFloat(ctr.data("product-price")),
+          subtotalCtr = ctr.find(".product-total-price"),
+          subtotalPrice = quantity * productPrice;
+        productQtyCtr.html(quantity);
+        subtotalCtr.html(subtotalPrice.to_$());
+        app.updateTotals();
+      },
+    
+      updateTotals: function () {
+        "use strict";
+        var products = $(".shopping-cart--list-item"),
+          subtotal = 0,
+          shipping;
+        for (var i = 0; i < products.length; i += 1) {
+          subtotal += parseFloat($(products[i]).find(".product-total-price").html().strip$());
+        }
+        shipping = (subtotal >= 100) ? 0 : app.shipping;
+        $("#subtotalCtr").find(".cart-totals-value").html(subtotal.to_$());
+        $("#taxesCtr").find(".cart-totals-value").html((subtotal * 0.06).to_$());
+        $("#totalCtr").find(".cart-totals-value").html((subtotal * 1.06 + 40).to_$());
+        {% comment %} $("#shippingCtr").find(".cart-totals-value").html(shipping.to_$()); {% endcomment %}
+      },
+    
+      attachEvents: function () {
+        "use strict";
+        $(".product-remove").on("click", app.removeProduct);
+        $(".product-plus").on("click", app.addProduct);
+        $(".product-subtract").on("click", app.subtractProduct);
+      },
+    
+      setProductImages: function () {
+        "use strict";
+        var images = $(".product-image"),
+          ctr,
+          img;
+        for (var i = 0; i < images.length; i += 1) {
+          ctr = $(images[i]),
+          img = ctr.find(".product-image--img");
+          ctr.css("background-image", "url(" + img.attr("src") + ")");
+          img.remove();
+        }
+      },
+    
+      renderTemplates: function () {
+        "use strict";
+        var products = app.products,
+          content = [],
+          template = new t($("#shopping-cart--list-item-template").html());
+        for (var i = 0; i < products.length; i += 1) {
+          content[i] = template.render(products[i]);
+        }
+        $("#shopping-cart--list").html(content.join(""));
+      }
+    };
+    
+    app.renderTemplates();
+    app.setProductImages();
+    app.attachEvents();
+
+    
+  </script>
+
+
+{% comment %} ************************************************** {% endcomment %}
+
+
+        <!-- End -->
+        {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+                        $('.add').click(function () {
+                        if ($(this).prev().val() < 10) {
+                        $(this).prev().val(+$(this).prev().val() + 1);
+                        }
+                });
+                $('.sub').click(function () {
+                        if ($(this).next().val() > 1) {
+                        if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+                        }
+                });
+        </script>  {% endcomment %}
+        <script src="{% static 'web/js/plugins.js' %}"></script>
+        <script src="{% static 'web/js/main.js' %}"></script>
+    </body>
+</html>

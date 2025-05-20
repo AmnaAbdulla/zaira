@@ -1,0 +1,548 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Zaira</title>
+    <meta name="description" content="Premium eCommerce Template" />
+
+    <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link
+      href="../../../fonts.googleapis.com/css65e2.css?family=Poppins:300,400,500,600,700%7COswald:300,400,500,600,700"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/plugins.min.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'images/icons/favicon.png' %}"
+    />
+
+    <!-- Modernizr -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="navbar">
+        <div class="logo">
+          <img src="{% static 'images/zairaa.png' %}" alt="Zaira Logo" />
+          <p style="color: #99c9c6; text-align: center; height: 1px">ZAIRA</p>
+        </div>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="{% url 'indus' %}">Product</a></li>
+            <li class="dropdown">
+              <a href="#">Category</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Docs</a></li>
+          </ul>
+        </nav>
+
+        <a href="#" class="sidemenu-btn" title="Menu Toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </header>
+      <!-- End .header -->
+
+      <aside class="sidemenu">
+        <div class="sidemenu-wrapper">
+          <div class="sidemenu-header">
+            <a href="index.html" class="sidemenu-logo">
+              <img
+                src="{% static 'images/zairaa.png' %}"
+                alt="logo"
+                style="border-radius: 50px"
+              />
+            </a>
+          </div>
+          <!-- End .sidemenu-header -->
+
+          <ul class="metismenu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="#" aria-expanded="false"
+                >Pages <span class="sidemenu-icon"></span
+              ></a>
+              <ul aria-expanded="false" class="collapse">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="404.html">404 Page</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" aria-expanded="false"
+                >Shop <span class="sidemenu-icon"></span
+              ></a>
+              <ul aria-expanded="false" class="collapse">
+                <li><a href="category.html">Category</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" aria-expanded="true"
+                >Category<span class="sidemenu-icon"></span
+              ></a>
+              <ul aria-expanded="true" class="collapse">
+                <li><a href="{% url 'ethnicwear' %}">Ethnic Wear</a></li>
+                <li><a href="{% url 'western' %}">Western Wear</a></li>
+                <li><a href="{% url 'party' %}">Party Wear</a></li>
+                <li><a href="{% url 'paksthani' %}">Paksthani suit</a></li>
+                <li><a href="{% url 'prayer' %}">Prayer Dress</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" aria-expanded="false"
+                >Blog<span class="sidemenu-icon"></span
+              ></a>
+              <ul aria-expanded="false" class="collapse">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="single.html">blog Post</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'category' %}">category</a></li>
+            <li><a href="{% url 'cart' %}">cart</a></li>
+            <li><a href="{% url 'checkout' %}">checkout</a></li>
+          </ul>
+        </div>
+        <!-- End .sidemenu-wrapper -->
+      </aside>
+      <!-- End .sidemenu -->
+
+      <div class="sidemenu-overlay"></div>
+      <!-- End .sidemenu-overlay -->
+
+      <div class="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-md-push-3">
+              <main class="hero-section">
+                <div class="text-content">
+                  <p class="tag">Winter Collection</p>
+                  <h1>New Winter Collections</h1>
+                  <p class="subtitle">There's nothing like trend</p>
+                  <button class="shop-btn">Shop Now →</button>
+                </div>
+
+                <div class="carousel-container">
+                  <img
+                    src="{% static 'images/model1.png' %}"
+                    alt="Slide 1"
+                    class="carousel-image active"
+                  />
+                  <img
+                    src="{% static 'images/model2.png' %}"
+                    alt="Slide 2"
+                    class="carousel-image"
+                  />
+                  <img
+                    src="{% static 'images/model3.png' %}"
+                    alt="Slide 3"
+                    class="carousel-image"
+                  />
+                </div>
+
+                <div class="carousel-controls">
+                  <button onclick="prevSlide()">←</button>
+                  <button onclick="nextSlide()">→</button>
+                </div>
+
+                <div class="carousel-indicators" id="indicators">
+                  <span class="cylinder active"></span>
+                  <span class="cylinder"></span>
+                  <span class="cylinder"></span>
+                </div>
+
+                <div class="side-note">SALE OFF 30% USE CODE: CILLOFF</div>
+              </main>
+
+              <div
+                class="owl-data-carousel owl-carousel"
+                data-owl-settings='{ "items":4, "nav": true, "dots":false }'
+                data-owl-responsive='{ "480": {"items": 2}, "768": {"items": 3}, "992": {"items": 3}, "1200": {"items": 4} }'
+              >
+                <!-- End .product -->
+              </div>
+              <!-- End .owl-data-carousel -->
+
+              <h3 class="carousel-title" style="text-align: center">
+                Featured Product
+              </h3>
+
+              <div
+                class="owl-data-carousel owl-carousel"
+                data-owl-settings='{ "items":4, "nav": true, "dots":false }'
+                data-owl-responsive='{ "480": {"items": 2}, "768": {"items": 3}, "992": {"items": 3}, "1200": {"items": 4} }'
+              >
+                {% for item in category%}
+
+                <div
+                  class="product"
+                  style="
+                    border: 2px solid #e7d8d8;
+                    padding: 15px;
+                    border-radius: 10px;
+                  "
+                >
+                  <figure class="product-image-container">
+                    <a href="#" title="Product Name" class="product-image-link">
+                      <img
+                        class="owl-lazy"
+                        data-src="{{item.image.url}}"
+                        width="195"
+                        height="100"
+                        alt="Product Image"
+                      />
+                    </a>
+                    <span class="product-label">-55%</span>
+                    <a href="#" class="btn-quick-view">Quick View</a>
+
+                    <div class="product-action">
+                      <a
+                        href="#"
+                        class="btn-product btn-wishlist"
+                        title="Add to Wishlist"
+                      >
+                        <i class="icon-product icon-heart"></i>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn-product btn-add-cart"
+                        title="Add to Bag"
+                      >
+                        <i class="icon-product icon-bag"></i>
+                        <span>Add to Bag</span>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn-product btn-compare"
+                        title="Add to Compare"
+                      >
+                        <i class="icon-product icon-bar"></i>
+                      </a>
+                    </div>
+                    <!-- End .product-action -->
+                  </figure>
+                  <h3 class="product-title" style="text-align: center">
+                    <a href="#">{{item.name}}</a>
+                  </h3>
+                  <div
+                    class="product-price-container"
+                    style="text-align: center"
+                  >
+                    <span class="product-price">{{item.price}}</span>
+                  </div>
+                  <!-- Endd .product-price-container -->
+                </div>
+                <!-- End .product -->
+
+                {% endfor %}
+              </div>
+              <!-- End .owl-data-carousel -->
+
+              <div class="mb30 mb10-xs"></div>
+              <!-- margin -->
+
+              <div class="mb50 visible-sm visible-xs"></div>
+              <!-- margin -->
+            </div>
+            <!-- End .col-md-9 -->
+          </div>
+          <!-- End .row -->
+        </div>
+        <!-- End .container -->
+      </div>
+      <!-- End .main -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="info-bar">
+            <div class="info-bar-col">
+              <h5 class="info-bar-title">Exchange</h5>
+              <p>Free shipping on all orders over $99</p>
+            </div>
+            <!-- End .info-bar-col -->
+            <!--div class="info-bar-col">
+                            <h5 class="info-bar-title">MONEY BACK GUARANTEE</h5>
+                            <p>100% money back guarantee</p>
+                        </div><!-- End .info-bar-col -->
+            <div class="info-bar-col">
+              <h5 class="info-bar-title">ONLINE SUPPORT 24/7</h5>
+              <p>Highly customer satisfaction</p>
+            </div>
+            <!-- End .info-bar-col -->
+          </div>
+          <!-- End .info-bar -->
+        </div>
+        <!-- End .container -->
+        <div class="footer-inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="widget widget-about">
+                  <h4 class="widget-title">Contact Information</h4>
+
+                  <address>
+                    <span>Zaira Designs First Floor </span>
+                    <span
+                      >Mankarathodi,Building Opposite
+                      SBI(RBO),Varangode,Malappuram 676519
+                    </span>
+
+                    <a
+                      href="https://wa.me/8089302309?text=Hello%20there!"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Chat on WhatsApp
+                    </a>
+                    <br>
+                    <a
+                      href="https://www.instagram.com/zaira_designs/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      zaira_designs
+                    </a>
+
+                    <a href="mailto:zairadesigns2022@gmail.com"
+                      >zairadesigns2022@gmail.com</a
+                    >
+                  </address>
+                </div>
+                <!-- End .widget -->
+              </div>
+              <!-- End .col-md-3 -->
+
+              <div class="col-sm-6 col-md-3">
+                <div class="widget">
+                  <h4 class="widget-title">Collection</h4>
+
+                  <ul class="links">
+                    <li><a href="{% url 'ethnicwear' %}">Ethnic Wear</a></li>
+                    <li><a href="{% url 'western' %}">Western Wear</a></li>
+                    <li><a href="{% url 'party' %}">Party Wear</a></li>
+                    <li><a href="{% url 'paksthani' %}">Paksthani suit</a></li>
+                    <li><a href="{% url 'prayer' %}">Prayer Dress</a></li>
+                  </ul>
+                </div>
+                <!-- End .widget -->
+              </div>
+              <!-- End .col-md-3 -->
+
+              <div class="clearfix visible-sm"></div>
+              <!-- clearfix -->
+
+              <div class="col-sm-6 col-md-3">
+                <div class="widget">
+                  <h4 class="widget-title">My Account</h4>
+
+                  <ul class="links">
+                    <li><a href="#">ACCOUNT</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">MY Cart</a></li>
+                    <li><a href="#">WISHLIST</a></li>
+                    <li><a href="#">CHECKOUT</a></li>
+                  </ul>
+                </div>
+                <!-- End .widget -->
+              </div>
+              <!-- End .col-md-3 -->
+
+              <div class="col-sm-6 col-md-3">
+                <div class="widget widget-newsletter">
+                  <h4 class="widget-title">Newsletter</h4>
+                  <p>Signup for our newsletter</p>
+
+                  <form action="#">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Your Email"
+                        required
+                      />
+                      <input type="submit" value="GO" class="btn" />
+                    </div>
+                    <!-- End .form-group -->
+                  </form>
+
+                  <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                    <a href="#" class="social-icon" title="Twitter"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                    <a href="#" class="social-icon" title="Linkedin"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+                <!-- End .widget -->
+              </div>
+              <!-- End .col-md-3 -->
+            </div>
+            <!-- End .row -->
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .footer-inner -->
+
+        <div class="footer-bottom">
+          <div class="container">
+            <p class="copyright"></p>
+            <!--img src="{% static 'images/cards.png" alt="Payment Methods' %}" class="img-cards"!-->
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .footer-bottom -->
+      </footer>
+      <!-- End .footer -->
+    </div>
+    <!-- End #wrapper -->
+
+    <a id="scroll-top" href="#top" title="Scroll top"
+      ><i class="fa fa-angle-up"></i
+    ></a>
+
+    <!-- End -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/new.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- REVOLUTION JS FILES -->
+    <script
+      type="text/javascript"
+      src="{% static 'js/jquery.themepunch.tools.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/jquery.themepunch.revolution.min.js' %}"
+    ></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+        (Load Extensions only on Local File Systems !  
+        The following part can be removed on Server for On Demand Loading) -->
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.actions.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.carousel.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.kenburn.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.layeranimation.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.migration.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.navigation.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.parallax.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.slideanims.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/extensions/revolution.extension.video.min.js' %}"
+    ></script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+        "use strict";
+
+        var revapi;
+        if ($("#rev_slider").revolution == undefined) {
+          revslider_showDoubleJqueryError("#rev_slider");
+        } else {
+          revapi = $("#rev_slider")
+            .show()
+            .revolution({
+              sliderType: "standard",
+              jsFileLocation: "{% static 'js/",
+              sliderLayout: "auto",
+              dottedOverlay: "none",
+              delay: 15000,
+              navigation: {
+                mouseScrollNavigation: "off",
+                onHoverStop: "off",
+                touch: {
+                  touchenabled: "on",
+                },
+                arrows: {
+                  style: "custom",
+                  enable: true,
+                  hide_onmobile: false,
+                  hide_under: 768,
+                  hide_onleave: false,
+                  tmp: "",
+                  left: {
+                    h_align: "left",
+                    v_align: "bottom",
+                    h_offset: 63,
+                    v_offset: 48,
+                  },
+                  right: {
+                    h_align: "left",
+                    v_align: "bottom",
+                    h_offset: 85,
+                    v_offset: 48,
+                  },
+                },
+                bullets: {
+                  enable: false,
+                },
+              },
+              responsiveLevels: [1200, 992, 768, 480],
+              gridwidth: [870, 679, 640, 480],
+              gridheight: [468, 400, 360, 300],
+              lazyType: "smart",
+              spinner: "spinner2",
+              parallax: {
+                type: "off",
+              },
+              debugMode: false,
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
