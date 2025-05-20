@@ -1,0 +1,6 @@
+Django==5.0.3  # Or your Django version
+djangorestframework==3.14.0  # If using DRF
+psycopg2-binary==2.9.9  # For PostgreSQL (adjust if using MySQL/SQLite)
+pillow==10.1.0  # For image handling
+python-dotenv==1.0.0  # For environment variables
+gunicorn==21.2.0  # For production (if deploying)
