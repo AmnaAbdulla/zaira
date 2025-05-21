@@ -4,3 +4,4 @@ psycopg2-binary==2.9.9  # For PostgreSQL (adjust if using MySQL/SQLite)
 pillow==10.1.0  # For image handling
 python-dotenv==1.0.0  # For environment variables
 gunicorn==21.2.0  # For production (if deploying)
+django-admin-interface
