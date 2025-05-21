@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-6roh8$0p0f-*j!olqd6!n7%vlxh3iq4^*h(757wg6qawp*)$n5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zaira-xjmq.onrender.com']
+ALLOWED_HOSTS = [
+    'zaira-xjmq.onrender.com',
+    '127.0.0.1',
+    'localhost'
+]
 
 
 # Application definition
