@@ -84,8 +84,12 @@ WSGI_APPLICATION = 'eccomerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'zairadb',
+        'USER': 'zairadb_user',
+        'PASSWORD': 'HXapX2oyjhY8iRCJZw9wfKea9A7yOezt',
+        'HOST': 'dpg-d0s45ju3jp1c73eak05g-a',
+        'PORT': '5432',
     }
 }
 
