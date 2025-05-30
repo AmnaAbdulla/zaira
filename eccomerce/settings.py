@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'zairadb',
         'USER': 'zairadb_user',
         'PASSWORD': 'HXapX2oyjhY8iRCJZw9wfKea9A7yOezt',
-        'HOST': 'dpg-d0s45ju3jp1c73eak05g-a',
+        'HOST': 'dpg-d0s45ju3jp1c73eak05g-a.oregon-postgres.render.com',
         'PORT': '5432',
     }
 }
